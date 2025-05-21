@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificação de Senha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="group-selection" class="screen">
+    <h1>Selecione um grupo</h1>
+    <div id="group-buttons"></div> <!-- Botões gerados via JS -->
+  </div>
+
+  <div id="password-screen" class="screen hidden">
+    <h1>Digite a senha</h1>
+    <div id="timer">00:30</div>
+
+    <button id="start-button" onclick="startTimer()">▶️ Iniciar</button>
+
+    <input type="number" id="password-input" placeholder="Senha" disabled>
+    <button id="check-button" onclick="checkPassword()" disabled>Verificar</button>
+
+    <div id="success-image" class="hidden">
+      <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Sucesso" width="150">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
