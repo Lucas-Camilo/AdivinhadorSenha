@@ -11,7 +11,7 @@ const passwords = {
   grupo6: "843510",
   grupo7: "105335",
   grupo8: "954642",
-  grupo9: "116327",
+  grupo9: "11637210",
   grupo10: "763554",
   grupo11: "123832",
   grupo12: "973737",
