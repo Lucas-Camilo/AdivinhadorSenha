@@ -2,37 +2,18 @@ let selectedGroup = null;
 let timerInterval = null;
 let timeElapsed = 0; // em milissegundos
 
+const equations = {
+  grupo1: "imagens/equacao1.png",
+  grupo2: "imagens/equacao2.png",
+  grupo3: "imagens/equacao3.png",
+  grupo4: "imagens/equacao4.png"
+};
+
 const passwords = {
   grupo1: "435812",
   grupo2: "714823",
   grupo3: "564923",
-  grupo4: "865629",
-  grupo5: "753947",
-  grupo6: "843510",
-  grupo7: "105335",
-  grupo8: "954642",
-  grupo9: "11637210",
-  grupo10: "763554",
-  grupo11: "123832",
-  grupo12: "973737",
-  grupo13: "987535",
-  grupo14: "934636",
-  grupo15: "11747210",
-  grupo16: "685659",
-  grupo17: "11587310",
-  grupo18: "764837",
-  grupo19: "14536415",
-  grupo20: "10747315",
-  grupo21: "1157835",
-  grupo22: "10946212",
-  grupo23: "975726",
-  grupo24: "11939412",
-  grupo25: "12956315",
-  grupo26: "1043749",
-  grupo27: "10766310",
-  grupo28: "10855312",
-  grupo29: "16677316",
-  grupo30: "1383939",
+  grupo4: "865629"
 };
 
 window.onload = function() {
@@ -50,6 +31,7 @@ window.onload = function() {
 
 function selectGroup(group) {
   selectedGroup = group;
+  const equationImg = document.getElementById("equation-img");
   document.getElementById("group-selection").classList.add("hidden");
   document.getElementById("password-screen").classList.remove("hidden");
 
@@ -60,7 +42,7 @@ function selectGroup(group) {
   document.getElementById("check-button").disabled = true;
   document.getElementById("start-button").disabled = false;
   document.getElementById("success-image").classList.add("hidden");
-
+  equationImg.src = equations[group];
   timeElapsed = 0;
 }
 
